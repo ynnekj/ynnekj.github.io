@@ -1,0 +1,68 @@
+  # Basic
+title: Jkenny
+# subtitle:
+# welcome_message:
+# description: 嗨，我是Jkenny
+creator: <a href="http://jkenny.cn">@jkenny</a>
+
+url: "http://jkenny.cn"
+
+permalink: /:year/:month/:day/:title/
+
+# Format
+# highlighter: plain
+# markdown: redcarpet
+# redcarpet:
+  # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
+markdown:    kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+    - table
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: slate
+
+blog_button:
+    title: 博客
+    description: 访问博客
+
+nav:
+    # - {title: 项目, description: 我的项目, url: 'https://github.com/ynnekj'}
+    # - {title: 关于, description: 了解更多关于我, url: 'http://jkenny.cn'}
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: jkenny
+    # duoshuo:
+# Social
+social:
+    weibo: ynnekj
+    github: ynnekj
+    twitter: jkennycn
+    gplus:
+    mail: jkenny.cn@gmail.com
+
+# Google Analytics
+ga:
+    id: UA-75243246-1
+    host: jkenny.cn
