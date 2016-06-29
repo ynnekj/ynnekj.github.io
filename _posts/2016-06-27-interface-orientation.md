@@ -78,7 +78,7 @@ tags: UI
 
 5. `didRotateFromInterfaceOrientation:` 在旋转结束后调用。
 
-这些事件会从 ContainerViewController 中自动传递到 ContentViewController 中也就是 childViewControllers ，如果想禁止这个自动传递的特性那么在 iOS6 之后重写 `shouldAutomaticallyForwardRotationMethods` 方法并返回 No 即可，但是这个方法在 iOS8 之后已经失效。取而代之的是 `viewWillTransitionToSize:withTransitionCoordinator:` 这个方法只要重写这个方法上面 iOS8 之前的那三个方法就不会被调用，而会调用该方法，并且这个方法没有自动传递给 childViewControllers 的特性，如果需要则自己重写该方法实现。
+这些事件会从 ContainerViewController 中自动传递到所有的 ContentViewController 中也就是 childViewControllers (iOS8.3 测试中需要 ViewController 的 View 添加到 ContainerViewController 的 View  中才会调用)，如果想禁止这个自动传递的特性那么在 iOS6 之后重写 `shouldAutomaticallyForwardRotationMethods` 方法并返回 No 即可，但是这个方法在 iOS8 之后已经失效。取而代之的是 `viewWillTransitionToSize:withTransitionCoordinator:` 这个方法只要 ContainerViewController 或 childViewControllers 中有一个 ViewController 重写该方法上面 iOS8 之前的那三个方法就不会被调用，而会调用该方法，并且该方法默认会调用所有 childViewController 的这个方法实现。
 
 Apple 官方文档在旋转时处理的一些提示：
 
