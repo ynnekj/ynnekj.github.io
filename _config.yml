@@ -1,8 +1,8 @@
   # Basic
 title: Jkenny
-# subtitle:
+subtitle: 少就是多，慢就是快
 # welcome_message:
-# description: 嗨，我是Jkenny
+description: Hi，我是蔡俊凯(@Jkenny)，一名 iOS 开发者。相信所有事物都有它不同的一面，乐于去探索这其中的异同，发现它我为之欢喜。
 creator: <a href="http://jkenny.cn">@jkenny</a>
 
 url: "http://jkenny.cn"
@@ -35,7 +35,7 @@ kramdown:
     - table
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: slate
+cover_color: blue
 
 blog_button:
     title: 博客
